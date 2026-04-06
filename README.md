@@ -1,2 +1,2 @@
-# jocelyn.bartolo-IntroProgramming
-JavaScript Basics Week 1. Lesson: Intro to programing CTD
+# jocelyn.bartolo-IntroToProgramming26.1 CTD
+JavaScript Basics Week 1. Lesson:
