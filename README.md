@@ -1,2 +1,2 @@
 # jocelyn.bartolo-IntroToProgramming26.1 CTD
-JavaScript Basics Week 1. Lesson:
+Portafolio Project for Intro to Programming Course with Code the Dream
