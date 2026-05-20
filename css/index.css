@@ -1,0 +1,115 @@
+/* COLOR PALETTE */
+:root {
+    --bg-main-color: #fbf3e0;
+    --bg-section-color: #95c687;
+    --bg-section-second: #a7d5f1;
+    --bg-third-color: #ffe07a;
+    --text-color: #000;
+    --text-color-section: #FBFBFB;
+
+    --font-name: "Cinzel Decorative", serif;
+    --font-main: "IM Fell French Canon", serif;
+    --font-section: "Luxurious Roman", serif;
+
+    --size-name: 60px;
+    --size-main: 20px;
+    --size-section: 40px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-third-color);
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    font-family: var(--font-section);
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-main-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+}
+
+h1 {
+    font-family: var(--font-name);
+    font-size: var(--size-name);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 50px 0px;
+    padding: 30px 0px;
+}
+
+section {
+    min-height: 300px;
+    padding: 0px;
+    margin: 10px;
+    font-size: var(--size-main);
+    text-align: center;
+}
+
+h2 {
+    background-color: var(--bg-section-color);
+    color: var(--text-color-section);
+    font-family: var(--font-section);
+    font-size: var(--size-section);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0px;
+}
+
+#experience ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+#experience li {
+    list-style-position: inside;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--bg-main-color);
+    border-radius: 6px;
+}
+
+#connect ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+#connect li {
+    list-style-position: inside;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--bg-main-color);
+    border-radius: 6px;
+}
