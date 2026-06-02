@@ -7,9 +7,9 @@
     --text-color: #000;
     --text-color-section: #FBFBFB;
 
-    --font-name: "Cinzel Decorative", serif;
-    --font-main: "IM Fell French Canon", serif;
-    --font-section: "Luxurious Roman", serif;
+    --font-name: "Playfair Display SC", serif;
+    --font-main: "Bodoni Moda", serif;
+    --font-section: "Prata", serif;
 
     --size-name: 60px;
     --size-main: 20px;
@@ -19,10 +19,11 @@
 nav {
     position: sticky;
     top: 0;
-    background-color: var(--bg-third-color);
-    padding: 10px 0;
+    background-color: var(--bg-main-color);
+    padding: 15px 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); /* Linea divisora sutil*/
 }
 
 nav ul {
@@ -40,6 +41,10 @@ nav a {
     font-family: var(--font-section);
     font-size: 15px;
     padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-third-color);
 }
 
 body {
@@ -54,7 +59,7 @@ h1 {
     font-size: var(--size-name);
     text-align: center;
     font-weight: bold;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin: 50px 0px;
     padding: 30px 0px;
 }
@@ -62,7 +67,7 @@ h1 {
 section {
     min-height: 300px;
     padding: 0px;
-    margin: 10px;
+    margin: 40px 10px;
     font-size: var(--size-main);
     text-align: center;
 }
@@ -73,7 +78,7 @@ h2 {
     font-family: var(--font-section);
     font-size: var(--size-section);
     text-align: center;
-    text-transform: uppercase;
+    /*text-transform: uppercase; */
     padding: 0px;
     margin: 0px;
 }
@@ -89,7 +94,7 @@ h2 {
 }
 
 #experience li {
-    list-style-position: inside;
+    list-style: none;
     margin: 0;
     padding: 10px;
     background-color: var(--bg-main-color);
@@ -112,4 +117,65 @@ h2 {
     padding: 10px;
     background-color: var(--bg-main-color);
     border-radius: 6px;
+}
+
+#skills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    margin: 0;
+}
+
+#skills li {
+    list-style: none;
+    background-color: var(--bg-section-second);
+    color: var(--text-color);
+    font-family: var(--font-section);
+    font-size: var(--size-main);
+    padding: 12px 24px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#skills li:hover {
+    transform: scale(1.05);
+    background-color: var(--bg-third-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    width: 100%;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 40px;
+        margin:20px 0px;
+    }
+
+    nav ul,
+    #experience ul,
+    #connect ul,
+    #skills ul {
+        flex-direction: column;
+        gap: 12 px;
+    }
+
+    nav a,
+    #experience li,
+    #skills li,
+    #connect a{
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 0;
+    }
 }
