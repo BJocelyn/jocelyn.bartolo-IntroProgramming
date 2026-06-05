@@ -166,7 +166,7 @@ footer {
     #connect ul,
     #skills ul {
         flex-direction: column;
-        gap: 12 px;
+        gap: 12px;
     }
 
     nav a,
@@ -178,4 +178,98 @@ footer {
         text-align: center;
         margin: 0;
     }
+    form[name="leave_message"] {
+        width: 90%;
+    }
+    form[name="leave_message"] button {
+        width: 100%;
+    }
+}
+
+form [name="leave_message"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+}
+
+form[name="leave_message"] label {
+    font-family: var(--font-section);
+    font-size: 18px;
+    align-self: flex-start;
+    margin-bottom: -5px;
+}
+
+form[name="leave_message"] input,
+form[name="leave_message"] textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: var(--font-main);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+@media(max-width: 600px) {
+    nav ul,
+    #experience ul,
+    #connect ul,
+    #skills ul {
+        gap: 12px;
+    }
+}
+form[name="leave_message"] button {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form[name="leave_message"] button,
+#messages button {
+    background-color: var(--bg-section-color);
+    color: var(--text-color-section);
+    font-family: var(--font-section);
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+form[name="leave_message"] button:hover,
+#messages button:hover {
+    transform: scale(1.05);
+    background-color: var(--bg-third-color);
+    color: var(--text-color);
+}
+#messages ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#messages li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-main);
+    font-size: 16px;
+}
+
+#messages li a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
 }
