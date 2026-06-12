@@ -142,7 +142,7 @@ async function fetchRepos(){
     console.error("Error fetching repositories:", error);
 
     const projectSection = document.getElementById("projects");
-    const projectList = preojectSection.querySelector("ul");
+    const projectList = projectSection.querySelector("ul");
 
     const errorMessage = document.createElement("li");
     errorMessage.innerText = "Unable to load projects at this time. Please try again later.";

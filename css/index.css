@@ -334,22 +334,22 @@ form[name="leave_message"] button:hover,
 
 #projects ul li {
     list-style: none;
-    background: var(--bg-section-color);
+    background: var(--olive);
     padding: 10px 20px;
-    border: 1px solid var(--bg-section-second);
+    border: 1px solid var(--sand);
     border-radius: 15px;
     font-family: var(--font-main);
     font-weight: bold;
     font-size: 17px;
-    color: var(--bg-main-color);
+    color: var(--text-color2);
     transition: all 0.5s;
     cursor: pointer;
 }
 
 #projects ul li:hover {
-    background: var(--bg-section-color);
-    border: 1px solid var(--bg-section-color);
-    color: var(--bg-main-color);
+    background: var(--brown);
+    border: 1px solid var(--olive);
+    color: var(--text-color2);
 }
 
 section:first-of-type {
