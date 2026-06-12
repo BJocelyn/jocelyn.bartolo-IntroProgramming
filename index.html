@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jocelyn Bartolo's Portfolio</title>
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap"
+      href="https://googleapis.com/css2?family=Playfair+Display+SC&display=swap"
     </link>
     <link  
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap"
+      href="https://googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prata&display=swap"
+      href="https://googleapis.com/css2?family=Prata&display=swap"
   </head>
 
   <body>
@@ -30,7 +32,10 @@
       </ul>
     </nav>
 
-    <h1>Jocelyn Bartolo</h1>
+    <header>
+      <h1>Jocelyn Bartolo</h1>
+      <div class="headerLine"></div>
+    </header>
 
     <section id="about">
       <h2>About</h2>
@@ -86,8 +91,7 @@
       <h2>Projects</h2>
       <ul></ul>
     </section>
-    <script src="js/index.js"></script>
-
+    
     <section id="leave-message">
       <h2>Leave a Message</h2>
       <form name="leave_message">
@@ -100,7 +104,7 @@
         <br />
 
         <label for="usersMessage">Message:</label>
-        <textarea id=""usersMessage" name="usersMessage" required></textarea>
+        <textarea id="usersMessage" name="usersMessage" required></textarea>
         <br />
 
         <button type="submit">Submit</button>

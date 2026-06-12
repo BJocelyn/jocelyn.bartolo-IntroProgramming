@@ -69,3 +69,87 @@ messageForm.addEventListener("submit", function(event) {
 
   messageForm.reset();
 });
+
+
+const GITHUB_USERNAME = "BJocelyn";
+const gitHubName = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+
+// fetch(gitHubApi)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error ("Error retrieving repositories" + response.status);
+//     }
+//     return response.json();
+//   })
+//   .then(repositories => {
+//     console.log("Repositories retrieve from GitHub:", repositories);
+
+//     const projectSection = document.getElementById("projects");
+//     const projectList = projectSection.querySelector("ul");
+
+//     projectList.innerHTML = "";
+
+//     for (let i = 0; i < repositories.length; i++) {
+//       const repo = repositories[i];
+//       const project = document.createElement("li");
+//       project.innerText = repo.name;
+
+//       projectList.appendChild(project);
+//     }
+//   })
+
+//   .catch(error => {
+//     console.error("Error fetching repositories:", error);
+
+//     const projectSection = document.getElementById("projects");
+//     const projectList = projectSection.querySelector("ul");
+    
+//     const errorMessage = document.createElement("li"); 
+//     errorMessage.innerText = "Unable to load projects at this time. Please try again later.";
+//     errorMessage.style.color  = "red";
+
+//     projectList.appendChild(errorMessage);
+//   });
+
+async function fetchRepos(){
+  try {
+    const response = await fetch(gitHubName);
+
+    if (!response.ok){
+      throw new Error("Error retrieving repositories" + response.status);
+    }
+
+    const repositories = await response.json();
+    console.log("Repositories retrieve from GitHub:", repositories);
+
+    const projectSection =  document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    projectList.innerHTML = "";
+
+    for (let i = 0; i < repositories.length; i++) {
+      const repo = repositories[i];
+
+      const project = document.createElement("li");
+      project.innerHTML = `
+      <strong>${repo.name}</strong><br>
+      <em>${repo.description || "No description available"}</em>
+      `;
+
+      projectList.appendChild(project);
+    }
+  } catch (error) {
+    console.error("Error fetching repositories:", error);
+
+    const projectSection = document.getElementById("projects");
+    const projectList = preojectSection.querySelector("ul");
+
+    const errorMessage = document.createElement("li");
+    errorMessage.innerText = "Unable to load projects at this time. Please try again later.";
+    errorMessage.style.color  = "red";
+
+    projectList.appendChild(errorMessage);
+  }
+}
+
+fetchRepos();
