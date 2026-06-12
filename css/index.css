@@ -1,28 +1,39 @@
 /* COLOR PALETTE */
 :root {
-    --bg-main-color: #fbf3e0;
-    --bg-section-color: #95c687;
-    --bg-section-second: #a7d5f1;
-    --bg-third-color: #ffe07a;
+    --bg-main: #fbf3e0;
+    --sand: #EEE0CC;
+    --olive: #707456; /* 9CB080*/ /* 607456 */
+    --olivewood: #3b4834; /* 41431B */
+    --brown: #7A5A43;
+    --navy: #0D1B2A; /* 202940 */
+    --charcoal: #1B263B; /* 2C3947 */
     --text-color: #000;
-    --text-color-section: #FBFBFB;
+    --text-color2: #FBFBFB;
 
-    --font-name: "Cinzel Decorative", serif;
-    --font-main: "IM Fell French Canon", serif;
-    --font-section: "Luxurious Roman", serif;
+    --font-header: "Playfair Display SC", serif;
+    --font-main: "Bodoni Moda", serif;
+    --font-h2: "Prata", serif;
 
-    --size-name: 60px;
-    --size-main: 20px;
-    --size-section: 40px;
+    
+    --size-main: 25px;
+    --size-h2: 45px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    font-family: var(--font-main);
 }
 
 nav {
     position: sticky;
     top: 0;
-    background-color: var(--bg-third-color);
-    padding: 10px 0;
+    background-color: var(--charcoal);
+    padding: 15px 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid var(--bg-main); /* Linea divisora sutil*/
 }
 
 nav ul {
@@ -36,46 +47,84 @@ nav ul {
 }
 
 nav a {
-    color: var(--text-color);
+    color: var(--charcoal);
+    background-color: var(--bg-main);
     font-family: var(--font-section);
-    font-size: 15px;
+    font-size: 18px;
     padding: 10px 15px;
+    text-decoration: none;
+
+    border: 2px solid #fff;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px (0,0,0,0.25);
 }
 
-body {
-    margin: 0;
-    background-color: var(--bg-main-color);
-    color: var(--text-color);
-    font-family: var(--font-main);
+header {
+    background-color: var(--charcoal);
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLine {
+    height: 2px;
+    width: 60px;
+    background-color: var(--brown);
+    margin-top: 20px;
 }
 
 h1 {
-    font-family: var(--font-name);
-    font-size: var(--size-name);
+    font-family: var(--font-header);
+    font-size: 70px;
     text-align: center;
     font-weight: bold;
+    color: var(--sand);
     text-transform: uppercase;
-    margin: 50px 0px;
-    padding: 30px 0px;
+    /* margin: 50px 0px;
+    padding: 30px 0px; */
 }
 
 section {
-    min-height: 300px;
-    padding: 0px;
-    margin: 10px;
+    min-height: 250px;
+    padding: 300px 10px;
+    margin: 10px 20px;
     font-size: var(--size-main);
     text-align: center;
+
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2 {
-    background-color: var(--bg-section-color);
-    color: var(--text-color-section);
-    font-family: var(--font-section);
-    font-size: var(--size-section);
+    background-color: var(--olivewood);
+    color: var(--text-color2);
+    font-family: var(--font-h2);
+    font-size: var(--size-h2);
     text-align: center;
-    text-transform: uppercase;
+    /*text-transform: uppercase; */
     padding: 0px;
     margin: 0px;
+
+    /* display: inline-block; */
+    display: block;
+    width: 1300px;
+    max-width: 100%;
+    padding: 15px 40px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+#about {
+    /* max-width: 100%; */
+    padding: 80px;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 #experience ul {
@@ -89,14 +138,15 @@ h2 {
 }
 
 #experience li {
-    list-style-position: inside;
+    list-style: none;
     margin: 0;
     padding: 10px;
-    background-color: var(--bg-main-color);
+    background-color: var(--bg-main);
     border-radius: 6px;
 }
 
 #connect ul {
+    list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,9 +157,201 @@ h2 {
 }
 
 #connect li {
+    list-style: none;
     list-style-position: inside;
     margin: 0;
     padding: 10px;
-    background-color: var(--bg-main-color);
+    background-color: var(--sand);
     border-radius: 6px;
+}
+
+#skills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    margin: 0;
+}
+
+#skills li {
+    list-style: none;
+    background-color: var(--olive);
+    color: var(--text-color2);
+    font-family: var(--font-main);
+    font-size: var(--size-main);
+    padding: 12px 24px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 250px;
+}
+
+#skills li:hover {
+    transform: scale(1.05);
+    background-color: var(--brown);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    width: 100%;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 40px;
+        margin:20px 0px;
+    }
+
+    nav ul,
+    #experience ul,
+    #connect ul,
+    #skills ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a,
+    #experience li,
+    #skills li,
+    #connect a{
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 0;
+    }
+    form[name="leave_message"] {
+        width: 90%;
+    }
+    form[name="leave_message"] button {
+        width: 100%;
+    }
+}
+
+form[name="leave_message"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+}
+
+form[name="leave_message"] label {
+    font-family: var(--font-main);
+    font-size: 18px;
+    text-align: center;
+    align-self: flex-start;
+    margin-bottom: -5px;
+}
+
+form[name="leave_message"] input,
+form[name="leave_message"] textarea {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--font-main);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+@media(max-width: 600px) {
+    nav ul,
+    #experience ul,
+    #connect ul,
+    #skills ul {
+        gap: 12px;
+    }
+}
+form[name="leave_message"] button {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form[name="leave_message"] button,
+#messages button {
+    background-color: var(--olivewood);
+    color: var(--text-color2);
+    font-family: var(--font-main);
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+form[name="leave_message"] button:hover,
+#messages button:hover {
+    transform: scale(1.05);
+    background-color: var(--olivewood);
+    color: var(--text-color2);
+}
+#messages ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#messages li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-main);
+    font-size: 16px;
+}
+
+#messages li a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#projects ul {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+#projects ul li {
+    list-style: none;
+    background: var(--olive);
+    padding: 10px 20px;
+    border: 1px solid var(--sand);
+    border-radius: 15px;
+    font-family: var(--font-main);
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--text-color2);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#projects ul li:hover {
+    background: var(--brown);
+    border: 1px solid var(--olive);
+    color: var(--text-color2);
+}
+
+section:first-of-type {
+    margin-top:0;
 }

@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jocelyn Bartolo's Portfolio</title>
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      href="https://googleapis.com/css2?family=Playfair+Display+SC&display=swap"
+    </link>
+    <link  
+      rel="stylesheet"
+      href="https://googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital,wght@0,400;0,700;1,400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap"
-    />
+      href="https://googleapis.com/css2?family=Prata&display=swap"
   </head>
 
   <body>
@@ -27,10 +28,14 @@
         <li><a href="#connect">Connect</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#leave-message">Leave a Message</a></li>
       </ul>
     </nav>
 
-    <h1>Jocelyn Bartolo</h1>
+    <header>
+      <h1>Jocelyn Bartolo</h1>
+      <div class="headerLine"></div>
+    </header>
 
     <section id="about">
       <h2>About</h2>
@@ -86,5 +91,31 @@
       <h2>Projects</h2>
       <ul></ul>
     </section>
+    
+    <section id="leave-message">
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+        <label for="usersName">Name:</label>
+        <input type="text" id="usersName" name="usersName" required/>
+        <br />
+        
+        <label for="usersEmail">Email:</label>
+        <input type="email" id="usersEmail" name="usersEmail" required />
+        <br />
+
+        <label for="usersMessage">Message:</label>
+        <textarea id="usersMessage" name="usersMessage" required></textarea>
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul id="messageList"></ul>
+    </section>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
