@@ -33,7 +33,7 @@ nav {
     padding: 15px 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid var(--bg-main); /* Linea divisora sutil*/
+    border-bottom: 1px solid var(--bg-main); /* Borderline */
 }
 
 nav ul {
@@ -64,6 +64,7 @@ header {
     background-color: var(--charcoal);
     padding-top: 50px;
     padding-bottom: 80px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,10 +80,10 @@ header {
 
 h1 {
     font-family: var(--font-header);
-    font-size: 70px;
+    font-size: clamp(32px, 6vw, 70px);
     text-align: center;
     font-weight: bold;
-    color: var(--sand);
+    color: var(--bg-main);
     text-transform: uppercase;
     /* margin: 50px 0px;
     padding: 30px 0px; */
@@ -90,14 +91,11 @@ h1 {
 
 section {
     min-height: 250px;
-    padding: 300px 10px;
-    margin: 10px 20px;
+    padding: 80px 40px;
+    margin: 0 auto 150px auto;
     font-size: var(--size-main);
     text-align: center;
-
     max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h2 {
@@ -107,15 +105,12 @@ h2 {
     font-size: var(--size-h2);
     text-align: center;
     /*text-transform: uppercase; */
-    padding: 0px;
-    margin: 0px;
-
+    padding: 15px 30px;
+    margin: 0 auto 80px auto;
     /* display: inline-block; */
     display: block;
     width: 1300px;
     max-width: 100%;
-    padding: 15px 40px;
-    margin: 20px auto;
     border-radius: 10px;
 }
 
@@ -128,41 +123,67 @@ h2 {
 }
 
 #experience ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: left;
 }
 
-#experience li {
-    list-style: none;
-    margin: 0;
-    padding: 10px;
+#experience > ul > li {
     background-color: var(--bg-main);
-    border-radius: 6px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#experience h3 {
+    background-color: var(--olive);
+    color: var(--bg-main);
+    font-size: 30px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 0;
+    margin-bottom: 25px;
+}
+
+#experience ul ul {
+    font-size: var(--size-main);
+    list-style: disc;
+    padding-left: 25px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 #connect ul {
-    list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 0;
+    gap: 40px;
+    padding: 20px;
+    margin: 0;
 }
 
 #connect li {
     list-style: none;
-    list-style-position: inside;
-    margin: 0;
-    padding: 10px;
-    background-color: var(--sand);
-    border-radius: 6px;
+    background-color: var(--olive);
+    color: var(--text-color2);
+    font-family: var(--font-main);
+    font-size: var(--size-main);
+    padding: 12px 24px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 250px;
+}
+
+#connect li:hover {
+    transform: scale(1.05);
+    background-color: var(--brown);
 }
 
 #skills ul {
@@ -171,7 +192,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 40px;
     padding: 20px;
     margin: 0;
 }
@@ -192,14 +213,6 @@ h2 {
 #skills li:hover {
     transform: scale(1.05);
     background-color: var(--brown);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    font-family: var(--font-main);
-    font-size: 16px;
-    width: 100%;
 }
 
 @media(max-width: 600px) {
@@ -246,7 +259,8 @@ form[name="leave_message"] {
 
 form[name="leave_message"] label {
     font-family: var(--font-main);
-    font-size: 18px;
+    font-size: var(--size-main);
+    color: var(--olive);
     text-align: center;
     align-self: flex-start;
     margin-bottom: -5px;
@@ -265,14 +279,6 @@ form[name="leave_message"] textarea {
     box-sizing: border-box;
 }
 
-@media(max-width: 600px) {
-    nav ul,
-    #experience ul,
-    #connect ul,
-    #skills ul {
-        gap: 12px;
-    }
-}
 form[name="leave_message"] button {
     resize: vertical;
     min-height: 100px;
@@ -283,7 +289,7 @@ form[name="leave_message"] button,
     background-color: var(--olivewood);
     color: var(--text-color2);
     font-family: var(--font-main);
-    font-size: 18px;
+    font-size: var(--size-main);
     padding: 12px 24px;
     border: none;
     border-radius: 20px;
@@ -295,7 +301,7 @@ form[name="leave_message"] button,
 form[name="leave_message"] button:hover,
 #messages button:hover {
     transform: scale(1.05);
-    background-color: var(--olivewood);
+    background-color: var(--brown);
     color: var(--text-color2);
 }
 #messages ul {
@@ -328,7 +334,7 @@ form[name="leave_message"] button:hover,
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
 }
 
@@ -347,9 +353,16 @@ form[name="leave_message"] button:hover,
 }
 
 #projects ul li:hover {
-    background: var(--brown);
-    border: 1px solid var(--olive);
-    color: var(--text-color2);
+    transform: scale(1.05);
+    background-color: var(--brown);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    width: 100%;
 }
 
 section:first-of-type {

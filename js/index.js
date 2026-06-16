@@ -74,6 +74,7 @@ messageForm.addEventListener("submit", function(event) {
 const GITHUB_USERNAME = "BJocelyn";
 const gitHubName = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 
+//Option 1
 // fetch(gitHubApi)
 //   .then(response => {
 //     if (!response.ok) {
@@ -111,6 +112,7 @@ const gitHubName = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 //     projectList.appendChild(errorMessage);
 //   });
 
+//Best Option to use, ASYNC FUNCTION
 async function fetchRepos(){
   try {
     const response = await fetch(gitHubName);
@@ -132,7 +134,10 @@ async function fetchRepos(){
 
       const project = document.createElement("li");
       project.innerHTML = `
+      <a href ="${repo.html_url}" target="_blank" rel="noopener noreferrer">
       <strong>${repo.name}</strong><br>
+      </a>
+      <br>
       <em>${repo.description || "No description available"}</em>
       `;
 
